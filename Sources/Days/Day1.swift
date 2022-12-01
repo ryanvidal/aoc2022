@@ -27,11 +27,11 @@ public class Day1Solver: DailySolver {
     }
 
     public func PerformPart2Calculation(_ input: CalculationInput) -> Int? {
-        let orderedElfCalories = input
+        return input
             .map { $0.reduce(0, +) }
             .sorted(by: >)
-
-        return orderedElfCalories[0] + orderedElfCalories[1] + orderedElfCalories[2]
+            .prefix(3)
+            .reduce(0, +)
     }
 }
 
