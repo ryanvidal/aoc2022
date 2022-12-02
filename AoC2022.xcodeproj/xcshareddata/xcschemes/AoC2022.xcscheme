@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "041A21F62751CC4E00A570D5"
-               BuildableName = "AoC2021"
+               BuildableName = "AoC2022"
                BlueprintName = "AoC2022"
                ReferencedContainer = "container:AoC2022.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "041A21F62751CC4E00A570D5"
-            BuildableName = "AoC2021"
+            BuildableName = "AoC2022"
             BlueprintName = "AoC2022"
             ReferencedContainer = "container:AoC2022.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "041A21F62751CC4E00A570D5"
-            BuildableName = "AoC2021"
+            BuildableName = "AoC2022"
             BlueprintName = "AoC2022"
             ReferencedContainer = "container:AoC2022.xcodeproj">
          </BuildableReference>
