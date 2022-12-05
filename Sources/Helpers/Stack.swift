@@ -29,4 +29,14 @@ struct Stack<Element> {
     var count: Int {
         return array.count
     }
+
+    func reversed() -> Stack<Element> {
+        let reversedArray = array.reversed()
+        var newStack = Stack<Element>()
+        for e in reversedArray {
+            newStack.push(e)
+        }
+
+        return newStack
+    }
 }
