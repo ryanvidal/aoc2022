@@ -10,6 +10,14 @@ import Foundation
 public struct Grid<Element> {
     var grid: [Pair: Element]
 
+    init() {
+        grid = [:]
+    }
+
+    init(_ grid: [Pair: Element]) {
+        self.grid = grid
+    }
+
     mutating func setValue(x: Int, y: Int, to value: Element) {
         setValue(at: Pair(x, y), to: value)
     }
@@ -38,6 +46,16 @@ public struct Grid<Element> {
             if point.x > xMax { xMax = point.x }
             if point.y > yMax { yMax = point.y }
         }
-        return (xMax, yMax)
+        return (xMax+1, yMax+1)
+    }
+
+    subscript(point: Pair) -> Element? {
+        get {
+            return grid[point]
+        }
+
+        set(newValue) {
+            grid[point] = newValue
+        }
     }
 }
