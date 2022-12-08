@@ -31,3 +31,28 @@ public struct Pair: Hashable {
         return val.1
     }
 }
+
+public extension Pair {
+    func neighbors(bounds: (ClosedRange<Int>, ClosedRange<Int>)) -> [Pair] {
+        var n: [Pair] = []
+        for x in (self.x-1)...(self.x+1) {
+            guard bounds.0.contains(x) else { continue }
+            for y in (self.y-1)...(self.y+1) {
+                guard bounds.1.contains(y) else { continue }
+                if x != self.x || y != self.y {
+                    n.append(Pair(x,y))
+                }
+            }
+        }
+        return n
+    }
+
+    func orthogonalNeighbors(bounds: (ClosedRange<Int>, ClosedRange<Int>)) -> [Pair] {
+        return [
+            Pair(self.x-1, self.y),
+            Pair(self.x+1, self.y),
+            Pair(self.x, self.y-1),
+            Pair(self.x, self.y+1),
+        ].filter { pair in bounds.0.contains(pair.x) && bounds.1.contains(pair.y) }
+    }
+}
