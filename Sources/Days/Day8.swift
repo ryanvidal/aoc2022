@@ -12,12 +12,13 @@ public let day8 = DailyPuzzleBase(solver: Day8Solver(),
                                        puzzleInput: puzzleInputString)
 
 public class Day8Solver: DailySolver {
-    public typealias CalculationInput = Grid<Tree>
+    public typealias CalculationInput = FullGrid<Tree>
 
     public func ParseInput(_ input: String) -> CalculationInput {
-        var trees = Grid<Tree>()
+        let lines = input.components(separatedBy: "\n")
+        var trees = FullGrid<Tree>(width: lines.first!.count, height: lines.count)
 
-        for (y, line) in input.components(separatedBy: "\n").enumerated() {
+        for (y, line) in lines.enumerated() {
             for (x, c) in line.enumerated() {
                 let location = Pair(x,y)
                 trees[location] = Tree(location: location, height: Int(String(c))!)
@@ -32,7 +33,7 @@ public class Day8Solver: DailySolver {
     }
 
     public func PerformPart2Calculation(_ input: CalculationInput) -> Int? {
-        return input.grid.map { $0.value.scenicScore(in: input) }.max()
+        return input.grid.flatMap { $0.compactMap { tree in tree?.scenicScore(in: input) } }.max()
     }
 }
 
@@ -45,7 +46,7 @@ public class Tree {
         self.height = height
     }
 
-    func canSeeEdge(in forest: Grid<Tree>) -> Bool {
+    func canSeeEdge(in forest: FullGrid<Tree>) -> Bool {
         let (forestWidth, forestHeight) = forest.size
 
         guard location.x != 0, location.y != 0, location.x != (forestWidth - 1), location.y != (forestHeight - 1) else { return true }
@@ -61,7 +62,7 @@ public class Tree {
             treesToTheBottom.allSatisfy { $0.height < height }
     }
 
-    func scenicScore(in forest: Grid<Tree>) -> Int {
+    func scenicScore(in forest: FullGrid<Tree>) -> Int {
         let (forestWidth, forestHeight) = forest.size
         let treesToTheLeft: [Tree] = (location.x == 0) ? [] : (0...(location.x - 1)).reversed().compactMap { forest[Pair($0, location.y)] }
         let treesToTheRight: [Tree] = (location.x == forestWidth-1) ? [] : ((location.x + 1)...(forestWidth - 1)).compactMap { forest[Pair($0, location.y)] }

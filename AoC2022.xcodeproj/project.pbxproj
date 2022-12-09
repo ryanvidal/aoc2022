@@ -15,6 +15,7 @@
 		0459468F275E489700A0A65F /* Sequence+countWhere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459468E275E489700A0A65F /* Sequence+countWhere.swift */; };
 		04594691275E59AF00A0A65F /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04594690275E59AF00A0A65F /* Pair.swift */; };
 		045F931A293E758F00F2F3A4 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F9319293E758F00F2F3A4 /* Grid.swift */; };
+		045F931C29423F1100F2F3A4 /* FullGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F931B29423F1100F2F3A4 /* FullGrid.swift */; };
 		047DBC282757EA1A003043DA /* Day21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DBC112757EA1A003043DA /* Day21.swift */; };
 		047DBC292757EA1A003043DA /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DBC122757EA1A003043DA /* Day7.swift */; };
 		047DBC2A2757EA1A003043DA /* Day17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DBC132757EA1A003043DA /* Day17.swift */; };
@@ -65,6 +66,7 @@
 		0459468E275E489700A0A65F /* Sequence+countWhere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+countWhere.swift"; sourceTree = "<group>"; };
 		04594690275E59AF00A0A65F /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
 		045F9319293E758F00F2F3A4 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		045F931B29423F1100F2F3A4 /* FullGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullGrid.swift; sourceTree = "<group>"; };
 		047DBC112757EA1A003043DA /* Day21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day21.swift; sourceTree = "<group>"; };
 		047DBC122757EA1A003043DA /* Day7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
 		047DBC132757EA1A003043DA /* Day17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day17.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				04594690275E59AF00A0A65F /* Pair.swift */,
 				04CA6FF32763778A006EF188 /* Stack.swift */,
 				045F9319293E758F00F2F3A4 /* Grid.swift */,
+				045F931B29423F1100F2F3A4 /* FullGrid.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				047DBC2D2757EA1A003043DA /* Day3.swift in Sources */,
 				047DBC352757EA1A003043DA /* Day23.swift in Sources */,
 				041A22022751CF0B00A570D5 /* DailyPuzzle.swift in Sources */,
+				045F931C29423F1100F2F3A4 /* FullGrid.swift in Sources */,
 				047DBC3C2757EA1A003043DA /* Day6.swift in Sources */,
 				04594691275E59AF00A0A65F /* Pair.swift in Sources */,
 				047DBC332757EA1A003043DA /* Day14.swift in Sources */,
