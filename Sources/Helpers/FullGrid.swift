@@ -10,8 +10,13 @@ import Foundation
 public struct FullGrid<Element> {
     var grid: [[Element?]]
 
+    private let width: Int
+    private let height: Int
+
     init(width: Int, height: Int) {
         grid = [[Element?]](repeating: [Element?](repeating: nil, count: width), count: height)
+        self.width = width
+        self.height = height
     }
 
     subscript(point: Pair) -> Element? {
@@ -37,6 +42,6 @@ public struct FullGrid<Element> {
     }
 
     var size: (Int, Int) {
-        return (grid.first!.count, grid.count)
+        return (width, height)
     }
 }

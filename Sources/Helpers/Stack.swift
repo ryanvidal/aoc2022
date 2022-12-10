@@ -10,6 +10,9 @@ import Foundation
 struct Stack<Element> {
     fileprivate var array: [Element] = []
 
+    init() { self.init([]) }
+    init(_ array: [Element]) { self.array = array.reversed() } // Stack order is reversed
+
     mutating func push(_ element: Element) {
         array.append(element)
     }
