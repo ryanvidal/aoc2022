@@ -16,6 +16,7 @@
 		04594691275E59AF00A0A65F /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04594690275E59AF00A0A65F /* Pair.swift */; };
 		045F931A293E758F00F2F3A4 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F9319293E758F00F2F3A4 /* Grid.swift */; };
 		045F931C29423F1100F2F3A4 /* FullGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F931B29423F1100F2F3A4 /* FullGrid.swift */; };
+		045F931F2947428A00F2F3A4 /* SwiftyDijkstra in Frameworks */ = {isa = PBXBuildFile; productRef = 045F931E2947428A00F2F3A4 /* SwiftyDijkstra */; };
 		047DBC282757EA1A003043DA /* Day21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DBC112757EA1A003043DA /* Day21.swift */; };
 		047DBC292757EA1A003043DA /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DBC122757EA1A003043DA /* Day7.swift */; };
 		047DBC2A2757EA1A003043DA /* Day17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DBC132757EA1A003043DA /* Day17.swift */; };
@@ -99,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045F931F2947428A00F2F3A4 /* SwiftyDijkstra in Frameworks */,
 				047DBC412757EBFD003043DA /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +199,7 @@
 			name = AoC2022;
 			packageProductDependencies = (
 				047DBC402757EBFD003043DA /* Algorithms */,
+				045F931E2947428A00F2F3A4 /* SwiftyDijkstra */,
 			);
 			productName = AoC2021;
 			productReference = 041A21F72751CC4E00A570D5 /* AoC2022 */;
@@ -227,6 +230,7 @@
 			mainGroup = 041A21EE2751CC4E00A570D5;
 			packageReferences = (
 				047DBC3F2757EBFD003043DA /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				045F931D2947428A00F2F3A4 /* XCRemoteSwiftPackageReference "SwiftyDijkstra" */,
 			);
 			productRefGroup = 041A21F82751CC4E00A570D5 /* Products */;
 			projectDirPath = "";
@@ -441,6 +445,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		045F931D2947428A00F2F3A4 /* XCRemoteSwiftPackageReference "SwiftyDijkstra" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/username0x0a/SwiftyDijkstra.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		047DBC3F2757EBFD003043DA /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-algorithms";
@@ -452,6 +464,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		045F931E2947428A00F2F3A4 /* SwiftyDijkstra */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 045F931D2947428A00F2F3A4 /* XCRemoteSwiftPackageReference "SwiftyDijkstra" */;
+			productName = SwiftyDijkstra;
+		};
 		047DBC402757EBFD003043DA /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 047DBC3F2757EBFD003043DA /* XCRemoteSwiftPackageReference "swift-algorithms" */;
