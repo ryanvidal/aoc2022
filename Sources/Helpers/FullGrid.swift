@@ -29,6 +29,16 @@ public struct FullGrid<Element> {
         }
     }
 
+    subscript(point: (Int, Int)) -> Element? {
+        get {
+            return grid[point.1][point.0]
+        }
+
+        set(newValue) {
+            grid[point.1][point.0] = newValue
+        }
+    }
+
     func getPoints(where predicate: (Element) -> Bool) -> [Pair] {
         var points: [Pair] = []
 
@@ -41,6 +51,7 @@ public struct FullGrid<Element> {
         return points
     }
 
+    /// Returns the width and height as a tuple `(width, height)`
     var size: (Int, Int) {
         return (width, height)
     }

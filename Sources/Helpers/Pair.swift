@@ -30,6 +30,10 @@ public struct Pair: Hashable {
     public var y: Int {
         return val.1
     }
+
+    public var stringValue: String {
+        "(\(x), \(y))"
+    }
 }
 
 public extension Pair {
