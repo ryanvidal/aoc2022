@@ -49,6 +49,18 @@ public struct Grid<Element> {
         return (xMax+1, yMax+1)
     }
 
+    var xRange: ClosedRange<Int> {
+        let (min, max) = points.map { $0.x }.minAndMax()!
+
+        return min...max
+    }
+
+    var yRange: ClosedRange<Int> {
+        let (min, max) = points.map { $0.y }.minAndMax()!
+
+        return min...max
+    }
+
     subscript(point: Pair) -> Element? {
         get {
             return grid[point]
